@@ -107,8 +107,8 @@ main::-webkit-scrollbar {
   align-items: center;
   flex-wrap: wrap;
 
-  height: 95%;
-  width: 95%;
+  height: 100%;
+  width: 100%;
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -124,37 +124,90 @@ main::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 
-  height: 70%;
+  height: 80%;
   width: 80%;
   border: 1px solid black;
   margin-bottom: 10%;
-  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.fbcd.co%2Fproducts%2Fresized%2Fresized-750-500%2F96795d4b9177795d2c06d4c0df5f59a079973bdae52566b9cc481decc7dc7d0c.jpg&f=1&nofb=1);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-/* 
+
 .card:first-child {
   margin-top: 5%;
 }
 
 .card:last-child {
   margin-bottom: 0;
-} */
+}
+
+.image-container {
+  height: 100%;
+  width: 100%;
+}
 
 .image {
-  height: 90%;
-  width: 95%;
+  height: 100%;
+  width: 100%;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.description {
-  height: 90%;
-  width: 90%;
+.descript-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.fbcd.co%2Fproducts%2Fresized%2Fresized-750-500%2F96795d4b9177795d2c06d4c0df5f59a079973bdae52566b9cc481decc7dc7d0c.jpg&f=1&nofb=1);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.description h2 {
-  width: 100%;
+.descript-inner-container {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+
+  height: 100%;
+  width: 92%;
+  background-color: white;
+}
+
+.description {
+  grid-row-end: span 2;
+  justify-self: center;
+  align-self: center;
+  text-decoration: underline;
+
+  width: 80%;
+  line-height: 1.5em;
+  margin-left: 2%;
+  background-color: white;
+}
+
+.title,
+.tech-container {
+  grid-column-start: 2;
+  justify-self: center;
+
+  /* width: 50%; */
+}
+
+.title {
+  align-self: center;
+}
+
+.tech-container {
+  align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.tech-title {
+  margin-bottom: 2%;
 }

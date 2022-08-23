@@ -15,12 +15,12 @@ const NavBar = () => {
       >
         About
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/projects"
         className={({ isActive }) => (isActive ? 'active' : undefined)}
       >
         Projects
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to="/resume"
         className={({ isActive }) => (isActive ? 'active' : undefined)}

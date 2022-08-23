@@ -1,12 +1,7 @@
-import { useState } from 'react'
-
 import Description from '../components/Description'
 import ImageCard from '../components/ImageCard'
 
-import projects from '../assets/globals'
-
-const Home = () => {
-  const [clicked, setClicked] = useState(true)
+const Home = ({ allProjects, clicked, selectedProject, toggleClicked }) => {
   return (
     <div id="home">
       <section id="blurb">
@@ -15,12 +10,12 @@ const Home = () => {
       </section>
       <section id="proj-container">
         <div id="card-container">
-          {projects.map((project) => (
+          {allProjects.map((project) => (
             <div key={project.id} className="card">
-              {clicked ? (
-                <ImageCard project={project} />
+              {clicked && selectedProject.id === Number(project.id) ? (
+                <Description project={project} toggleClicked={toggleClicked} />
               ) : (
-                <Description project={project} />
+                <ImageCard project={project} toggleClicked={toggleClicked} />
               )}
             </div>
           ))}

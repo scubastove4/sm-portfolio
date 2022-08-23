@@ -1,9 +1,14 @@
-const Description = ({ project }) => {
+const Description = ({ project, toggleClicked }) => {
   return (
-    <div className="description">
-      <h2>{project.title}</h2>
-      <p>{project.description}</p>
-      <p>{project.technologies}</p>
+    <div className="descript-container" onClick={() => toggleClicked(project)}>
+      <div className="descript-inner-container">
+        <p className="description">{project.description}</p>
+        <h2 className="title">{project.title}</h2>
+        <span className="tech-container">
+          <h3 className="tech-title">Technologies Used: </h3>
+          <p className="tech">{project.technologies}</p>
+        </span>
+      </div>
     </div>
   )
 }
