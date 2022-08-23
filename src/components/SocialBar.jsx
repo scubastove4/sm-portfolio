@@ -4,7 +4,11 @@ import { AiOutlineLinkedin, AiOutlineMail, AiFillGithub } from 'react-icons/ai'
 const Social = () => {
   return (
     <footer>
-      <a href="https://www.linkedin.com/in/stephen-morello/" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/stephen-morello/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <AiOutlineLinkedin />
       </a>
       <NavLink
@@ -13,7 +17,11 @@ const Social = () => {
       >
         <AiOutlineMail />
       </NavLink>
-      <a href="https://github.com/scubastove4" target="_blank">
+      <a
+        href="https://github.com/scubastove4"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <AiFillGithub />
       </a>
     </footer>

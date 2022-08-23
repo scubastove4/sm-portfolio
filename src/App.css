@@ -53,3 +53,18 @@ main {
   height: 80%;
   width: 100%;
 }
+
+#home {
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+  width: 100%;
+}
+
+#blurb,
+#proj-container {
+  height: 100%;
+  width: 50%;
+  border: 1px solid black;
+}
