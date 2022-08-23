@@ -15,10 +15,11 @@ body {
 }
 
 #app-content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template: 1fr 8fr 1fr / 1fr 1fr;
+  /* flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 
   height: 100%;
   width: 100%;
@@ -26,6 +27,9 @@ body {
 
 nav,
 footer {
+  grid-column-end: span 2;
+  place-self: center;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -50,8 +54,19 @@ a:hover {
 }
 
 main {
-  height: 80%;
+  grid-column-end: span 2;
+  align-self: stretch;
+  justify-self: stretch;
+
+  height: 100%;
   width: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+main::-webkit-scrollbar {
+  display: none; /*Chrome */
 }
 
 #home {
@@ -67,4 +82,79 @@ main {
   height: 100%;
   width: 50%;
   border: 1px solid black;
+}
+
+#blurb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#proj-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#card-container {
+  display: flex;
+  /* grid-template-rows: 1fr;
+  justify-items: center; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  height: 95%;
+  width: 95%;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#card-container::-webkit-scrollbar {
+  display: none; /*Chrome */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 70%;
+  width: 80%;
+  border: 1px solid black;
+  margin-bottom: 10%;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.fbcd.co%2Fproducts%2Fresized%2Fresized-750-500%2F96795d4b9177795d2c06d4c0df5f59a079973bdae52566b9cc481decc7dc7d0c.jpg&f=1&nofb=1);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* 
+.card:first-child {
+  margin-top: 5%;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+} */
+
+.image {
+  height: 90%;
+  width: 95%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.description {
+  height: 90%;
+  width: 90%;
+}
+
+.description h2 {
+  width: 100%;
 }

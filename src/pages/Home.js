@@ -3,10 +3,10 @@ import { useState } from 'react'
 import Description from '../components/Description'
 import ImageCard from '../components/ImageCard'
 
-import { projects } from '../globals'
+import projects from '../assets/globals'
 
 const Home = () => {
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(true)
   return (
     <div id="home">
       <section id="blurb">
@@ -14,9 +14,17 @@ const Home = () => {
         <h2>Hi! Welcome to my page!</h2>
       </section>
       <section id="proj-container">
-        {/* {projects.map((projects) => (
-          <div>{clicked ? <ImageCard /> : <Description />}</div>
-        ))} */}
+        <div id="card-container">
+          {projects.map((project) => (
+            <div key={project.id} className="card">
+              {clicked ? (
+                <ImageCard project={project} />
+              ) : (
+                <Description project={project} />
+              )}
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   )
