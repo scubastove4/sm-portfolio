@@ -1,6 +1,6 @@
-const ImageCard = ({ project, toggleClicked }) => {
+const ImageCard = ({ project }) => {
   return (
-    <div className="image-container" onClick={() => toggleClicked(project)}>
+    <div className="image-container">
       <h2>{project.title}</h2>
       <div
         className="image"

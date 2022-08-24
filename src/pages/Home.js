@@ -12,11 +12,18 @@ const Home = ({ allProjects, clicked, selectedProject, toggleClicked }) => {
         <div id="card-container">
           {allProjects.map((project) => (
             <div key={project.id} className="card">
-              {clicked && selectedProject.id === Number(project.id) ? (
-                <Description project={project} toggleClicked={toggleClicked} />
+              {clicked && selectedProject.id === project.id ? (
+                <Description project={project} />
               ) : (
-                <ImageCard project={project} toggleClicked={toggleClicked} />
+                <ImageCard project={project} />
               )}
+              <div className="btn-container">
+                <button onClick={() => toggleClicked(project)}>
+                  Description
+                </button>
+                <button>Site</button>
+                <button>GitHub</button>
+              </div>
             </div>
           ))}
         </div>

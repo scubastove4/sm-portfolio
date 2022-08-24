@@ -1,6 +1,6 @@
-const Description = ({ project, toggleClicked }) => {
+const Description = ({ project }) => {
   return (
-    <div className="descript-container" onClick={() => toggleClicked(project)}>
+    <div className="descript-container">
       <div className="descript-inner-container">
         <p className="description">{project.description}</p>
         <h2 className="title">{project.title}</h2>

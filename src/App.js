@@ -21,9 +21,10 @@ function App() {
     if (!clicked) {
       setClicked(true)
       setSelectedProject(project)
+    } else {
+      setClicked(false)
+      setSelectedProject({})
     }
-    setClicked(false)
-    setSelectedProject({})
   }
   return (
     <div id="app-content">

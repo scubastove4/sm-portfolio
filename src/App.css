@@ -28,29 +28,90 @@ body {
 nav,
 footer {
   grid-column-end: span 2;
-  place-self: center;
+  /* place-self: center; */
+  align-self: center;
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  /* align-items: center; */
 
-  height: 10%;
+  height: 100%;
   width: 100%;
 }
 
-a {
-  margin: 1% 2% 1% 0;
-  text-decoration: none;
-  color: black;
+nav {
+  background: linear-gradient(#190a04, #002859);
 }
 
-a:last-child {
-  margin-right: 0;
+nav p {
+  color: white;
 }
+
+#p1,
+#p5,
+#p7,
+#p10 {
+  align-self: flex-end;
+}
+
+#p2,
+#p6,
+#p9,
+#p13 {
+  align-self: center;
+}
+
+footer {
+  justify-content: space-evenly;
+  background: linear-gradient(#e9c46a, #220d04 50%);
+}
+
+footer p {
+  color: #e9c46a;
+}
+
+#p14,
+#p17,
+#p20,
+#p21,
+#p22,
+#p25,
+#p27 {
+  align-self: flex-end;
+  font-size: 1.5em;
+}
+
+#p15,
+#p16,
+#p18,
+#p19,
+#p23,
+#p24,
+#p26 {
+  align-self: center;
+  font-size: 1.5em;
+}
+
+a {
+  align-self: center;
+
+  /* margin: 1% 2% 1% 0; */
+  text-decoration: none;
+  color: #ebe9e9;
+  font-size: 1.5em;
+}
+
+/* a:last-child {
+  margin-right: 0;
+} */
 
 a:hover {
   cursor: pointer;
+}
+
+footer a {
+  font-size: 2em;
 }
 
 main {
@@ -60,6 +121,7 @@ main {
 
   height: 100%;
   width: 100%;
+  background: linear-gradient(#002859, #1d3557, #6667ab, #ffa69e, #e9c46a);
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -81,7 +143,7 @@ main::-webkit-scrollbar {
 #proj-container {
   height: 100%;
   width: 50%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 #blurb {
@@ -126,7 +188,7 @@ main::-webkit-scrollbar {
 
   height: 80%;
   width: 80%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-bottom: 10%;
 }
 
@@ -135,18 +197,30 @@ main::-webkit-scrollbar {
 }
 
 .card:last-child {
-  margin-bottom: 0;
+  margin-bottom: 5%;
+}
+
+.image-container,
+.descript-container {
+  border: 1px solid black;
 }
 
 .image-container {
-  height: 100%;
+  height: 85%;
   width: 100%;
 }
 
-.image {
-  height: 100%;
+.image-container h2 {
+  height: 10%;
   width: 100%;
-  background-position: center center;
+  text-align: center;
+  color: #ebe9e9;
+}
+
+.image {
+  height: 90%;
+  width: 100%;
+  background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -156,7 +230,7 @@ main::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 
-  height: 100%;
+  height: 85%;
   width: 100%;
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.fbcd.co%2Fproducts%2Fresized%2Fresized-750-500%2F96795d4b9177795d2c06d4c0df5f59a079973bdae52566b9cc481decc7dc7d0c.jpg&f=1&nofb=1);
   background-position: center;
@@ -210,4 +284,28 @@ main::-webkit-scrollbar {
 
 .tech-title {
   margin-bottom: 2%;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 15%;
+  width: 100%;
+}
+
+.btn-container button {
+  height: 80%;
+  width: 20%;
+  margin: 4% 2% 0 0;
+  border-radius: 5px;
+  color: #ebe9e9;
+  border: 3px solid #ebe9e9;
+  background-color: transparent;
+}
+
+.btn-container button:last-child {
+  margin-right: 0;
 }
