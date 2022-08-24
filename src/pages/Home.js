@@ -21,8 +21,24 @@ const Home = ({ allProjects, clicked, selectedProject, toggleClicked }) => {
                 <button onClick={() => toggleClicked(project)}>
                   Description
                 </button>
-                <button>Site</button>
-                <button>GitHub</button>
+                <button>
+                  <a
+                    href={`${project.site}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Site
+                  </a>
+                </button>
+                <button>
+                  <a
+                    href={`${project.repo}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </button>
               </div>
             </div>
           ))}

@@ -71,24 +71,24 @@ footer p {
   color: #e9c46a;
 }
 
-#p14,
-#p17,
-#p20,
+#p15,
+#p18,
 #p21,
 #p22,
-#p25,
-#p27 {
+#p23,
+#p26,
+#p28 {
   align-self: flex-end;
   font-size: 1.5em;
 }
 
-#p15,
 #p16,
-#p18,
+#p17,
 #p19,
-#p23,
+#p20,
 #p24,
-#p26 {
+#p25,
+#p27 {
   align-self: center;
   font-size: 1.5em;
 }
@@ -202,7 +202,9 @@ main::-webkit-scrollbar {
 
 .image-container,
 .descript-container {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.7em #08f7fe;
 }
 
 .image-container {
@@ -215,6 +217,7 @@ main::-webkit-scrollbar {
   width: 100%;
   text-align: center;
   color: #ebe9e9;
+  padding-top: 1%;
 }
 
 .image {
@@ -223,6 +226,7 @@ main::-webkit-scrollbar {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 0 0 0.6em 0.6em;
 }
 
 .descript-container {
@@ -301,11 +305,26 @@ main::-webkit-scrollbar {
   width: 20%;
   margin: 4% 2% 0 0;
   border-radius: 5px;
-  color: #ebe9e9;
-  border: 3px solid #ebe9e9;
-  background-color: transparent;
+  /* color: #ebe9e9; */
+  color: #2e282a;
+  /* border: 3px solid #ebe9e9; */
+  border: none;
+  background-color: #ebe9e9;
+  box-shadow: 0 0 0.7em #08f7fe;
+  font-size: 1em;
 }
 
 .btn-container button:last-child {
   margin-right: 0;
+}
+
+.btn-container button:hover {
+  cursor: pointer;
+}
+
+.btn-container button a {
+  height: 100%;
+  width: 100%;
+  color: #2e282a;
+  font-size: 1em;
 }

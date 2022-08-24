@@ -36,11 +36,11 @@ const NavBar = () => {
       >
         Resume
       </NavLink>
-
       <p id="p10">.</p>
       <p id="p11">.</p>
       <p id="p12">.</p>
       <p id="p13">.</p>
+      <p id="p14">.</p>
     </nav>
   )
 }
