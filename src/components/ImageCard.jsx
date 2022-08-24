@@ -4,7 +4,7 @@ const ImageCard = ({ project }) => {
       <h2>{project.title}</h2>
       <div
         className="image"
-        style={{ backgroundImage: `url(.${project.image})` }}
+        style={{ backgroundImage: `url(${project.image})` }}
       ></div>
     </div>
   )
