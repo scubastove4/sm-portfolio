@@ -16,7 +16,7 @@ body {
 
 #app-content {
   display: grid;
-  grid-template: 1fr 8fr 1fr / 1fr 1fr;
+  grid-template: 1fr 8fr 1fr / 2fr 1fr;
   /* flex-direction: column;
   justify-content: center;
   align-items: center; */
@@ -142,8 +142,6 @@ main::-webkit-scrollbar {
 #blurb,
 #proj-container {
   height: 100%;
-  width: 50%;
-  /* border: 1px solid black; */
 }
 
 #blurb {
@@ -151,6 +149,8 @@ main::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  width: 66%;
 }
 
 #proj-container {
@@ -158,13 +158,15 @@ main::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  width: 33%;
 }
 
 #card-container {
   display: flex;
   /* grid-template-rows: 1fr;
   justify-items: center; */
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -202,13 +204,13 @@ main::-webkit-scrollbar {
 
 .image-container,
 .descript-container {
-  /* border: 1px solid black; */
   border-radius: 0.5em;
-  box-shadow: 0 0 0.7em #08f7fe;
+  box-shadow: 0 0 0.9em #ea3546;
 }
 
-.image-container {
-  height: 85%;
+.image-container,
+.descript-container {
+  height: 70%;
   width: 100%;
 }
 
@@ -234,11 +236,9 @@ main::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 
-  height: 85%;
-  width: 100%;
-  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.fbcd.co%2Fproducts%2Fresized%2Fresized-750-500%2F96795d4b9177795d2c06d4c0df5f59a079973bdae52566b9cc481decc7dc7d0c.jpg&f=1&nofb=1);
+  /* background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.fbcd.co%2Fproducts%2Fresized%2Fresized-750-500%2F96795d4b9177795d2c06d4c0df5f59a079973bdae52566b9cc481decc7dc7d0c.jpg&f=1&nofb=1); */
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -247,8 +247,9 @@ main::-webkit-scrollbar {
   grid-template: 1fr 1fr / 1fr 1fr;
 
   height: 100%;
-  width: 92%;
+  width: 100%;
   background-color: white;
+  border-radius: 0.7em;
 }
 
 .description {
@@ -260,15 +261,13 @@ main::-webkit-scrollbar {
   width: 80%;
   line-height: 1.5em;
   margin-left: 2%;
-  background-color: white;
+  word-break: break-all;
 }
 
 .title,
 .tech-container {
   grid-column-start: 2;
   justify-self: center;
-
-  /* width: 50%; */
 }
 
 .title {
@@ -310,8 +309,8 @@ main::-webkit-scrollbar {
   /* border: 3px solid #ebe9e9; */
   border: none;
   background-color: #ebe9e9;
-  box-shadow: 0 0 0.7em #08f7fe;
-  font-size: 1em;
+  box-shadow: 0 0 0.9em #ea3546;
+  font-size: 0.8em;
 }
 
 .btn-container button:last-child {
