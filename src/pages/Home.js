@@ -1,5 +1,6 @@
 import Description from '../components/Description'
 import ImageCard from '../components/ImageCard'
+import { IoIosArrowForward } from 'react-icons/io'
 
 const Home = ({ allProjects, clicked, selectedProject, toggleClicked }) => {
   return (
@@ -9,13 +10,21 @@ const Home = ({ allProjects, clicked, selectedProject, toggleClicked }) => {
         <h2>Hi! Welcome to my page!</h2>
       </section>
       <section id="proj-container">
+        <div id="featured-projects">
+          <h3>Featured Projects</h3>
+          <IoIosArrowForward />
+          <IoIosArrowForward />
+          <IoIosArrowForward />
+        </div>
         <div id="card-container">
           {allProjects.map((project) => (
             <div key={project.id} className="card">
               {clicked && selectedProject.id === project.id ? (
                 <Description project={project} />
               ) : (
-                <ImageCard project={project} />
+                <div className="sun">
+                  <h2>{project.title}</h2>
+                </div>
               )}
               <div className="btn-container">
                 <button onClick={() => toggleClicked(project)}>

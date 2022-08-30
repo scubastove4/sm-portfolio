@@ -150,16 +150,170 @@ main::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 
-  width: 66%;
+  width: 56%;
 }
 
 #proj-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  /* align-items: center;
+  justify-content: center; */
 
-  width: 33%;
+  width: 44%;
+}
+
+#featured-projects {
+  grid-column-start: 1;
+  align-self: stretch;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  transform: rotate(-180deg);
+  translate: 180deg;
+
+  height: 100%;
+  width: 100%;
+  writing-mode: vertical-lr;
+}
+
+#featured-projects h3 {
+  font-size: 1.5em;
+  margin-bottom: 2%;
+}
+
+#featured-projects svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: rotate(90deg);
+  font-size: 2em;
+}
+
+#featured-projects svg:first-of-type {
+  animation: blink-start 3s infinite;
+  -webkit-animation: blink-start 3s infinite;
+}
+
+#featured-projects svg:nth-of-type(2) {
+  animation: blink-middle 3s infinite;
+  -webkit-animation: blink-middle 3s infinite;
+}
+
+#featured-projects svg:last-of-type {
+  animation: blink-end 3s infinite;
+  -webkit-animation: blink-end 3s infinite;
+}
+
+@keyframes blink-start {
+  0% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink-start {
+  0% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink-middle {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink-middle {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink-end {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink-end {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 #card-container {
@@ -169,7 +323,7 @@ main::-webkit-scrollbar {
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 
   height: 100%;
   width: 100%;
@@ -188,18 +342,19 @@ main::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 
-  height: 80%;
-  width: 80%;
+  height: 95%;
+  width: 100%;
   /* border: 1px solid black; */
   margin-bottom: 10%;
 }
 
-.card:first-child {
+.card:last-child {
   margin-top: 5%;
 }
 
+.card:first-child,
 .card:last-child {
-  margin-bottom: 5%;
+  margin: 5% 0;
 }
 
 .image-container,
@@ -231,25 +386,44 @@ main::-webkit-scrollbar {
   border-radius: 0 0 0.6em 0.6em;
 }
 
-.descript-container {
+.sun {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.fbcd.co%2Fproducts%2Fresized%2Fresized-750-500%2F96795d4b9177795d2c06d4c0df5f59a079973bdae52566b9cc481decc7dc7d0c.jpg&f=1&nofb=1); */
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  height: 80%;
+  width: 95%;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  background-color: #ea3546;
+  opacity: 0.8;
 }
 
-.descript-inner-container {
+.sun h2 {
+  color: #ea3546;
+  background-color: transparent;
+  font-size: 3em;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.2),
+    1px -1px 0 rgba(0, 0, 0, 0.2), -1px -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.descript-container {
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 
   height: 100%;
   width: 100%;
   background-color: white;
   border-radius: 0.7em;
+
+  /* background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.fbcd.co%2Fproducts%2Fresized%2Fresized-750-500%2F96795d4b9177795d2c06d4c0df5f59a079973bdae52566b9cc481decc7dc7d0c.jpg&f=1&nofb=1); */
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .description {
@@ -258,10 +432,11 @@ main::-webkit-scrollbar {
   align-self: center;
   text-decoration: underline;
 
-  width: 80%;
+  width: 100%;
   line-height: 1.5em;
-  margin-left: 2%;
-  word-break: break-all;
+  /* margin-right: 3%; */
+  padding: 0 2% 0 3%;
+  word-break: keep-all;
 }
 
 .title,
@@ -283,6 +458,7 @@ main::-webkit-scrollbar {
   justify-content: center;
 
   text-align: center;
+  margin-right: 2%;
 }
 
 .tech-title {
@@ -300,17 +476,17 @@ main::-webkit-scrollbar {
 }
 
 .btn-container button {
-  height: 80%;
-  width: 20%;
+  height: 50%;
+  width: 30%;
   margin: 4% 2% 0 0;
   border-radius: 5px;
   /* color: #ebe9e9; */
   color: #2e282a;
   /* border: 3px solid #ebe9e9; */
   border: none;
-  background-color: #ebe9e9;
+  background-color: transparent;
   box-shadow: 0 0 0.9em #ea3546;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .btn-container button:last-child {

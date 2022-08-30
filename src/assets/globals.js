@@ -28,7 +28,7 @@ const projects = [
     image: '',
     title: 'fitter',
     description:
-      'Twitter for fitness enthusiasts. As a group, we collaborated on custom frontend and backend REST API. I managed user auth, code review/debugging, and Github backend branch policies/version control.',
+      '\nTwitter for fitness enthusiasts.\nAs a group, we collaborated on custom frontend and backend REST API.\nI managed user auth, code review/debugging, and Github backend branch policies/version control.',
     technologies:
       'PostgreSQL/Sequelize, Express, React, Node.js, Git/GitHub, BCrypt, JWT, Multer, and Firebase',
     site: '',
