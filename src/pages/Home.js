@@ -1,5 +1,5 @@
 import Description from '../components/Description'
-import ImageCard from '../components/ImageCard'
+// import ImageCard from '../components/ImageCard'
 import { IoIosArrowForward } from 'react-icons/io'
 
 const Home = ({ allProjects, clicked, selectedProject, toggleClicked }) => {

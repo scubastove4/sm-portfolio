@@ -15,7 +15,8 @@ import './App.css'
 
 function App() {
   const [clicked, setClicked] = useState(false)
-  const [allProjects, setAllProjects] = useState(projects)
+  // const [allProjects, setAllProjects] = useState(projects)
+  const allProjects = projects
   const [selectedProject, setSelectedProject] = useState({})
 
   const toggleClicked = (project) => {
