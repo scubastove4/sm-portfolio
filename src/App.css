@@ -437,6 +437,12 @@ main::-webkit-scrollbar {
   background-repeat: no-repeat;
 }
 
+.card .descript-container {
+  background-image: url('./images/orange-moon.jpeg');
+  background-position: 1.2%;
+  background-size: 150%;
+}
+
 .description {
   /* grid-row-end: span 2;
   justify-self: center;
