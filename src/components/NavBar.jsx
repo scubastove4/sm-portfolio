@@ -24,12 +24,14 @@ const NavBar = () => {
       </NavLink>
       <p id="p8">.</p>
       <p id="p9">.</p>
-      {/* <NavLink
+      <NavLink
         to="/projects"
         className={({ isActive }) => (isActive ? 'active' : undefined)}
       >
         Projects
-      </NavLink> */}
+      </NavLink>
+      <p id="p29">.</p>
+      <p id="p30">.</p>
       <NavLink
         to="/resume"
         className={({ isActive }) => (isActive ? 'active' : undefined)}
