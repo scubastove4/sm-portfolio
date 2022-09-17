@@ -45,7 +45,7 @@ const projects = [
       '\nEcommerce site, with separate admin and customer models, that conditionally render specific functionality.\nThe goal of this project is to make an intuitive, easy-to-use template that a growing small business can replicate and modify to suit their needs.',
     technologies:
       'PostgreSQL/Sequelize, Express, Vue, Node.js, Git/GitHub, BCrypt, JWT, Multer, Firebase, and Stripe',
-    site: 'www.buy-my-stuff-online.com',
+    site: 'https://www.buy-my-stuff-online.com',
     repo: 'https://github.com/scubastove4/buy-my-stuff',
     featured: true
   }
