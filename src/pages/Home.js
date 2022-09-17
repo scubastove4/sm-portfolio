@@ -22,46 +22,50 @@ const Home = ({
           <IoIosArrowForward />
         </div>
         <div id="card-container">
-          {allProjects.map(
-            (project) =>
-              project.featured && (
-                <div key={project.id} className="card">
-                  {clicked && selectedProject.id === project.id ? (
-                    <Description
-                      project={project}
-                      toProjectDetails={toProjectDetails}
-                    />
-                  ) : (
-                    <div className="sun">
-                      <h2>{project.title}</h2>
+          {allProjects
+            ?.sort((a, b) => {
+              return b.id - a.id
+            })
+            .map(
+              (project) =>
+                project.featured && (
+                  <div key={project.id} className="card">
+                    {clicked && selectedProject.id === project.id ? (
+                      <Description
+                        project={project}
+                        toProjectDetails={toProjectDetails}
+                      />
+                    ) : (
+                      <div className="sun">
+                        <h2>{project.title}</h2>
+                      </div>
+                    )}
+                    <div className="btn-container">
+                      <button onClick={() => toggleClicked(project)}>
+                        Description
+                      </button>
+                      <button>
+                        <a
+                          href={`${project.site}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Site
+                        </a>
+                      </button>
+                      <button>
+                        <a
+                          href={`${project.repo}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          GitHub
+                        </a>
+                      </button>
                     </div>
-                  )}
-                  <div className="btn-container">
-                    <button onClick={() => toggleClicked(project)}>
-                      Description
-                    </button>
-                    <button>
-                      <a
-                        href={`${project.site}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Site
-                      </a>
-                    </button>
-                    <button>
-                      <a
-                        href={`${project.repo}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        GitHub
-                      </a>
-                    </button>
                   </div>
-                </div>
-              )
-          )}
+                )
+            )}
         </div>
       </section>
     </div>

@@ -197,6 +197,15 @@ main::-webkit-scrollbar {
 
   transform: rotate(90deg);
   font-size: 2em;
+  color: transparent;
+  text-shadow: 0 0 0.9em #ea3546;
+  background: 0 0 0.9em #ea3546;
+  background-clip: text;
+}
+
+#featured-projects svg path {
+  box-shadow: 0 0 0.9em #ea3546;
+  background: transparent;
 }
 
 #featured-projects svg:first-of-type {
