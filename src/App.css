@@ -201,15 +201,6 @@ main::-webkit-scrollbar {
   color: rgba(234, 53, 70, 0.3);
 }
 
-#featured-projects svg path {
-  /* -webkit-text-stroke: 1px rgba(234, 53, 70, 1); */
-  /* filter: drop-shadow(0 0 rgb(234, 53, 70)); */
-  /* box-shadow: 0 0 0.9em #ea3546;
-  background: transparent; */
-  /* box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
-    0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073; */
-}
-
 #featured-projects svg:first-of-type {
   animation: blink-start 3s infinite;
   -webkit-animation: blink-start 3s infinite;
