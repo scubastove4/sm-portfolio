@@ -816,7 +816,28 @@ main::-webkit-scrollbar {
     display: none;
   }
 
+  .card .description {
+    width: 80%;
+    margin: 0;
+    padding: 0;
+  }
+
   .btn-container button {
     font-size: 1em;
+  }
+
+  /*  ///////////////  iphone 12 nav, main, footer, and home above  ////////////*/
+
+  #about {
+    flex-direction: column;
+
+    font-size: 1em;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  #about::-webkit-scrollbar {
+    display: none; /*Chrome */
   }
 }

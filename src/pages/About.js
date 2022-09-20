@@ -16,6 +16,10 @@ const About = () => {
         healthcare operations, makes me flexible and adaptable to rapidly
         changing circumstances.
       </p>
+      <h2>Technologies</h2>
+      <p>Libraries: JavaScript, Python, SQL, CSS, HTML</p>
+      <p>Frameworks: React, Node, Django, Express, MongoDB, Git</p>
+      <p>Other: GitHub, Firebase, Netlify, Heroku, Surge</p>
     </section>
   )
 }
