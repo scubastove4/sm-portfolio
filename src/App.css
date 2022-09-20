@@ -670,12 +670,12 @@ main::-webkit-scrollbar {
 
 @media only screen and (max-width: 850px) {
   #app-content {
-    grid-template: 1fr 9fr / 1fr;
+    grid-template: 0.5fr 9fr 0.5fr / 1fr;
   }
 
-  footer {
+  /* footer {
     display: none;
-  }
+  } */
 
   #home {
     flex-direction: column;
@@ -763,10 +763,9 @@ main::-webkit-scrollbar {
     height: 100%;
   }
 
-  /* .card {
-    justify-content: center;
-    align-items: center;
-  } */
+  .card {
+    height: 70%;
+  }
 
   .sun h2 {
     font-size: 2em;
