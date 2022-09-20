@@ -669,6 +669,12 @@ main::-webkit-scrollbar {
 /* ///////////   mobile styling below  /////////// */
 
 @media only screen and (max-width: 850px) {
+  #app-content {
+    grid-template: 0.5fr 9fr 0.5fr / 2fr 1fr;
+  }
+  /* nav {
+
+  } */
   main {
     grid-column-start: 1;
     grid-column-end: span 2;
@@ -756,5 +762,8 @@ main::-webkit-scrollbar {
     flex-wrap: wrap;
 
     height: 60%;
+  }
+
+  .card {
   }
 }
