@@ -365,18 +365,18 @@ main::-webkit-scrollbar {
   margin: 5% 0;
 }
 
-.image-container {
+/* .image-container {
   border-radius: 0.5em;
   box-shadow: 0 0 0.9em #ea3546;
-}
+} */
 
-.image-container,
+/* .image-container, */
 .descript-container {
   height: 70%;
   width: 100%;
 }
 
-.image-container h2 {
+/* .image-container h2 {
   height: 10%;
   width: 100%;
   text-align: center;
@@ -391,7 +391,7 @@ main::-webkit-scrollbar {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0 0 0.6em 0.6em;
-}
+} */
 
 .sun {
   display: flex;
@@ -754,5 +754,7 @@ main::-webkit-scrollbar {
   #card-container {
     flex-direction: row;
     flex-wrap: wrap;
+
+    height: 60%;
   }
 }
