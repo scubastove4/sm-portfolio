@@ -1,3 +1,13 @@
+@font-face {
+  src: url(Fonts/Novello_Pro_Normal.otf);
+  font-family: novello;
+}
+
+@font-face {
+  src: url(Fonts/Antaro.ttf);
+  font-family: antaro;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +17,7 @@
 body {
   height: 100vh;
   width: 100vw;
+  font-family: antaro;
 }
 
 #root {
@@ -186,7 +197,7 @@ main::-webkit-scrollbar {
 }
 
 #featured-projects h3 {
-  font-size: 1.5em;
+  font-size: 3em;
   margin-bottom: 2%;
   color: rgba(234, 53, 70, 0.5);
 }
@@ -197,7 +208,7 @@ main::-webkit-scrollbar {
   align-items: center;
 
   transform: rotate(90deg);
-  font-size: 2em;
+  font-size: 3.5em;
   color: rgba(234, 53, 70, 0.3);
 }
 
@@ -409,7 +420,7 @@ main::-webkit-scrollbar {
 .sun h2 {
   color: #ea3546;
   background-color: transparent;
-  font-size: 3em;
+  font-size: 5em;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
   text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.2),
     1px -1px 0 rgba(0, 0, 0, 0.2), -1px -1px 0 rgba(0, 0, 0, 0.2);
@@ -440,9 +451,12 @@ main::-webkit-scrollbar {
 }
 
 .card .descript-container {
-  background-image: url('./images/orange-moon.jpeg');
+  background-color: #ea3546;
+  opacity: 0.8;
+  /* background-image: url('./images/orange-moon.jpeg');
   background-position: 1.2%;
-  background-size: 150%;
+  background-size: 150%; */
+  color: #ebe9e9;
 }
 
 .description {
@@ -507,7 +521,7 @@ main::-webkit-scrollbar {
   border: none;
   background-color: transparent;
   box-shadow: 0 0 0.9em #ea3546;
-  font-size: 1em;
+  font-size: 2em;
 }
 
 .btn-container button:last-child {
@@ -677,6 +691,25 @@ main::-webkit-scrollbar {
     display: none;
   } */
 
+  nav a {
+    font-size: 1em;
+  }
+
+  footer a {
+    align-self: flex-end;
+
+    display: flex;
+    align-items: flex-end;
+
+    height: 100%;
+    font-size: 1.5em;
+    padding-bottom: 1%;
+  }
+
+  /* footer a svg {
+    margin-bottom: 1%;
+  } */
+
   #home {
     flex-direction: column;
     justify-content: center;
@@ -712,18 +745,20 @@ main::-webkit-scrollbar {
 
   #featured-projects h3 {
     margin: 0 1%;
+    font-size: 1.5em;
   }
-
-  /* #featured-projects svg {
-    animation: blink 2s infinite;
-    -webkit-animation: blink 2s infinite;
-  } */
 
   #featured-projects svg:first-of-type {
     order: -1;
   }
   #featured-projects svg:last-of-type {
     display: none;
+  }
+
+  #featured-projects svg {
+    /* animation: blink 2s infinite;
+    -webkit-animation: blink 2s infinite; */
+    font-size: 2em;
   }
 
   /* @keyframes blink {
@@ -767,7 +802,21 @@ main::-webkit-scrollbar {
     height: 70%;
   }
 
+  .sun,
+  .descript-container {
+    height: 80%;
+  }
+
   .sun h2 {
     font-size: 2em;
+  }
+
+  .descript-container .title,
+  .descript-container .tech-container {
+    display: none;
+  }
+
+  .btn-container button {
+    font-size: 1em;
   }
 }
