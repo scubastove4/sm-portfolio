@@ -1,24 +1,36 @@
-import { Document } from 'react-pdf/dist/esm/entry.webpack5'
-import resume from '../Resume/SMorelloResume.pdf'
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5'
+import resume from '../Resume/Stephen_Morello_Resume.pdf'
 
 const Resume = () => {
   return (
-    <div>
-      {resume && (
-        <Document
-          file={
-            'https://drive.google.com/file/d/1ol0aSZFwPCpkeuk9pOnZuQViKbcqIH4O/view?usp=sharing'
-          }
-          onLoadError={console.error}
-          style={{ width: '50vw', height: '100%' }}
-        ></Document>
-      )}
-      {/* <object
-      data={resume}
-      type="application/pdf"
-      width="100%"
-      height="100%"
-    ></object> */}
+    <div id="resume">
+      <a href={resume} download={resume}>
+        <button>Download</button>
+      </a>
+      {/* {resumeImage ? ( */}
+      <Document
+        file={resume}
+        onLoadError={console.error}
+        style={{ width: '50%', height: '100%' }}
+      >
+        <Page pageIndex={0} />
+      </Document>
+      {/* ) : (
+        <object
+          data={resume}
+          type="application/pdf"
+          width="100%"
+          height="100%"
+          name="SMorello-Resume"
+        >
+          <p>
+            Google OneDrive copy of
+            <a href="https://drive.google.com/file/d/1ol0aSZFwPCpkeuk9pOnZuQViKbcqIH4O/view?usp=sharing">
+              Resume
+            </a>
+          </p>
+        </object>
+      )} */}
     </div>
   )
 }

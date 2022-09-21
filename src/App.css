@@ -752,10 +752,41 @@ main::-webkit-scrollbar {
   margin-right: 0;
 }
 
-.react-pdf_Document {
+/* ///////////   resume styling below  /////////// */
+
+#resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
   height: 100%;
+  width: 100%;
+}
+
+#resume a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 50%;
 }
+
+#resume button {
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 1em;
+  border: none;
+  border-radius: 1em;
+  width: max-content;
+  padding: 1% 2%;
+  margin: 1% 0;
+}
+
+/* .react-pdf_Document {
+  height: 100%;
+  width: 50%;
+} */
 
 /* ///////////   general styling above  /////////// */
 
@@ -1039,4 +1070,38 @@ main::-webkit-scrollbar {
     margin-right: 1%;
   }
   /*  ///////////////     iphone 12 projects above       ////////////*/
+  #resume {
+    justify-content: space-between;
+  }
+
+  #resume a {
+    height: 10%;
+  }
+
+  .react-pdf__Document {
+    height: 90% !important;
+    width: 100% !important;
+  }
+
+  .react-pdf__Page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .react-pdf__Page__canvas {
+    width: 90% !important;
+    height: 80% !important;
+  }
+
+  .react-pdf__Page__annotations,
+  .annotationLayer {
+    display: none !important;
+  }
+
+  /*  ///////////////     iphone 12 resume above       ////////////*/
 }
