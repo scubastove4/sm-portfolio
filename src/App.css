@@ -751,6 +751,12 @@ main::-webkit-scrollbar {
 #proj-pg-container .btn-container button:last-child {
   margin-right: 0;
 }
+
+.react-pdf_Document {
+  height: 100%;
+  width: 50%;
+}
+
 /* ///////////   general styling above  /////////// */
 
 /* @media (min-width: 1440px){
