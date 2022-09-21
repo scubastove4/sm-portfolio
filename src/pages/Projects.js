@@ -3,8 +3,6 @@ import Description from '../components/Description'
 const Projects = ({ allProjects, toProjectDetails }) => {
   return (
     <div id="projects-page">
-      {/* {allProjects ? ( */}
-      {/* <div id="proj-page-container"> */}
       {allProjects
         ?.sort((a, b) => {
           return b.id - a.id
@@ -37,8 +35,6 @@ const Projects = ({ allProjects, toProjectDetails }) => {
             </div>
           </div>
         ))}
-      {/* </div> */}
-      {/* ) : null}  */}
     </div>
   )
 }

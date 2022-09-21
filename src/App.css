@@ -126,6 +126,10 @@ footer a {
   font-size: 2em;
 }
 
+.active {
+  color: #e9c46a;
+}
+
 main {
   grid-column-end: span 2;
   align-self: stretch;
@@ -873,7 +877,7 @@ main::-webkit-scrollbar {
     font-size: 2em;
   }
 
-  .descript-container .title,
+  .card .descript-container .title,
   .descript-container .tech-container {
     display: none;
   }
@@ -949,4 +953,67 @@ main::-webkit-scrollbar {
     color: #023047;
     margin-bottom: 3%;
   }
+
+  /*  ///////////////     iphone 12 about above       ////////////*/
+
+  #projects-page {
+    /* align-items: center; */
+
+    width: 100%;
+    padding: 0 2%;
+  }
+
+  #proj-pg-container {
+    width: 100%;
+    height: 50%;
+    margin-top: 4%;
+  }
+
+  #proj-pg-container:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  #proj-pg-container .descript-container {
+    grid-template: 2fr 3fr / 3fr 2fr;
+    min-height: 90%;
+  }
+
+  #proj-pg-container .descript-container img {
+    grid-column-start: 1;
+    grid-row-start: 1;
+
+    height: 98%;
+    padding-top: 2%;
+  }
+
+  #proj-pg-container .descript-container .title {
+    grid-column-start: 2;
+    grid-row-start: 1;
+
+    text-align: center;
+  }
+
+  #proj-pg-container .descript-container .description {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    place-self: center;
+
+    font-size: 1.25em;
+  }
+
+  #proj-pg-container .btn-container {
+    height: 8%;
+    margin: 1% 0;
+  }
+
+  #proj-pg-container .btn-container button {
+    height: 100%;
+    margin: 1% 0 0 0;
+  }
+
+  #proj-pg-container .btn-container button:first-of-type {
+    margin-right: 1%;
+  }
+  /*  ///////////////     iphone 12 projects above       ////////////*/
 }
