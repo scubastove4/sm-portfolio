@@ -547,7 +547,7 @@ main::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
 
-  width: 95%;
+  width: 100%;
   height: 100%;
   font-size: 1.5em;
   color: #ebe9e9;
@@ -560,7 +560,7 @@ main::-webkit-scrollbar {
   /* margin: 1% 0; */
 }
 
-#about p {
+#bio {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -830,6 +830,7 @@ main::-webkit-scrollbar {
 
   #about {
     flex-direction: column;
+    justify-content: flex-start;
 
     font-size: 1em;
     overflow-y: scroll;
@@ -839,5 +840,38 @@ main::-webkit-scrollbar {
 
   #about::-webkit-scrollbar {
     display: none; /*Chrome */
+  }
+
+  #about img {
+    height: 20%;
+    width: 40%;
+    margin: 2% 0 3% 0;
+  }
+
+  #about h2 {
+    margin-bottom: 1%;
+  }
+
+  #bio {
+    display: flex;
+    align-items: flex-start;
+
+    height: 50%;
+    width: 100%;
+    padding: 0 4%;
+    font-size: 1.25em;
+    margin-bottom: 3%;
+
+    background: -webkit-linear-gradient(#eee 50%, #023047, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #libraries,
+  #frameworks,
+  #other-skills {
+    font-size: 1.25em;
+    width: 100%;
+    padding: 0 4%;
   }
 }

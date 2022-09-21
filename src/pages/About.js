@@ -4,7 +4,8 @@ const About = () => {
   return (
     <section id="about">
       <img src={profPic} alt="Steve" />
-      <p>
+      <h2>Bio</h2>
+      <p id="bio">
         I am a software engineer who enjoys travel and learning creative methods
         for crafting user-friendly, interactive applications and software. I
         approach each language and framework like traversing a new city or
@@ -17,9 +18,11 @@ const About = () => {
         changing circumstances.
       </p>
       <h2>Technologies</h2>
-      <p>Libraries: JavaScript, Python, SQL, CSS, HTML</p>
-      <p>Frameworks: React, Node, Django, Express, MongoDB, Git</p>
-      <p>Other: GitHub, Firebase, Netlify, Heroku, Surge</p>
+      <p id="libraries">Libraries: JavaScript, Python, SQL, CSS, HTML</p>
+      <p id="frameworks">
+        Frameworks: React, Node, Django, Express, MongoDB, Git
+      </p>
+      <p id="other-skills">Other: GitHub, Firebase, Netlify, Heroku, Surge</p>
     </section>
   )
 }
