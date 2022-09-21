@@ -10,6 +10,7 @@ const NavBar = () => {
       <p id="p5">.</p>
       <NavLink
         to="/"
+        exact={true}
         className={({ isActive }) => (isActive ? 'active' : undefined)}
       >
         Home

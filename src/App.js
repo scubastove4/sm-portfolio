@@ -44,8 +44,7 @@ function App() {
       <main>
         <Routes>
           <Route
-            // path="/"
-            index
+            path="/"
             element={
               <Home
                 allProjects={allProjects}
