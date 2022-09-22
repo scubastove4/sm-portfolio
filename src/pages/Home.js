@@ -2,7 +2,7 @@ import Description from '../components/Description'
 import { IoIosArrowForward } from 'react-icons/io'
 
 const Home = ({
-  allProjects,
+  projects,
   clicked,
   selectedProject,
   toggleClicked,
@@ -22,7 +22,7 @@ const Home = ({
           <IoIosArrowForward />
         </div>
         <div id="card-container">
-          {allProjects
+          {projects
             ?.sort((a, b) => {
               return b.id - a.id
             })

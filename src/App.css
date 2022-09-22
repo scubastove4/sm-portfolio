@@ -752,6 +752,62 @@ main::-webkit-scrollbar {
   margin-right: 0;
 }
 
+/* ///////////   project details styling below  /////////// */
+
+#project-details-pg {
+  display: grid;
+  grid-template: 0.5fr repeat(3, 1fr) / repeat(2, 1fr);
+  place-items: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+#pd-title {
+  grid-column-end: span 2;
+
+  font-size: 3em;
+  color: #ebe9e9;
+}
+
+#project-details-pg img {
+  height: 15em;
+  width: 30em;
+  border-radius: 1em;
+}
+
+#pd-tech-container,
+#pd-planned-updates,
+#pd-challenges-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ebe9e9;
+}
+
+#pd-tech-title {
+  font-size: 2em;
+}
+
+#pd-tech {
+  font-size: 1.5em;
+}
+
+#pd-description {
+  grid-column-end: span 2;
+
+  font-size: 2em;
+  padding: 0 2%;
+  color: #023047;
+}
+
+#pd-planned-updates,
+#pd-challenges-container {
+  color: #023047;
+  font-size: 1.5em;
+  align-self: flex-start;
+}
+
 /* ///////////   resume styling below  /////////// */
 
 #resume {
@@ -1076,6 +1132,11 @@ main::-webkit-scrollbar {
 
   #resume a {
     height: 10%;
+    width: 90%;
+  }
+
+  #resume button {
+    padding: 2% 3%;
   }
 
   .react-pdf__Document {

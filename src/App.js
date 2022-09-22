@@ -15,9 +15,14 @@ import './App.css'
 
 function App() {
   const [clicked, setClicked] = useState(false)
-  // const [allProjects, setAllProjects] = useState(projects)
-  const allProjects = projects
   const [selectedProject, setSelectedProject] = useState({})
+  const [projectDetail, setProjectDetail] = useState(null)
+
+  const loadProject = (projectId) => {
+    let loadedProject = projects.find((project) => project.id === projectId)
+    setProjectDetail(loadedProject)
+  }
+
   let navigate = useNavigate()
 
   const toggleClicked = (project) => {
@@ -34,9 +39,9 @@ function App() {
     navigate(`/projects/${projectId}`)
   }
 
-  const toProjects = () => {
-    navigate('/projects')
-  }
+  // const toProjects = () => {
+  //   navigate('/projects')
+  // }
 
   return (
     <div id="app-content">
@@ -47,7 +52,7 @@ function App() {
             path="/"
             element={
               <Home
-                allProjects={allProjects}
+                projects={projects}
                 clicked={clicked}
                 selectedProject={selectedProject}
                 toggleClicked={toggleClicked}
@@ -60,14 +65,20 @@ function App() {
             path="/projects"
             element={
               <Projects
-                allProjects={allProjects}
+                projects={projects}
                 toProjectDetails={toProjectDetails}
               />
             }
           />
           <Route
-            path="/projects/:id"
-            element={<ProjectDetails toProjects={toProjects} />}
+            path="/projects/:projectId"
+            element={
+              <ProjectDetails
+                // toProjects={toProjects}
+                loadProject={loadProject}
+                projectDetail={projectDetail}
+              />
+            }
           />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />

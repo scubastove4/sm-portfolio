@@ -1,10 +1,10 @@
 import Description from '../components/Description'
 
-const Projects = ({ allProjects, toProjectDetails }) => {
+const Projects = ({ projects, toProjectDetails }) => {
   return (
     <div id="projects-page">
       <h1>Click a card for more info!</h1>
-      {allProjects
+      {projects
         ?.sort((a, b) => {
           return b.id - a.id
         })
