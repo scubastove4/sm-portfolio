@@ -24,7 +24,7 @@ const About = () => {
       </span>
       <span id="frameworks">
         <h3>Frameworks:</h3>
-        <p>React, Node, Django, Express, MongoDB, Git</p>
+        <p>React, Vue, Node, Django, Express, MongoDB, Git</p>
       </span>
       <span id="other-skills">
         <h3>Other:</h3>
