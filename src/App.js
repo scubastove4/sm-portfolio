@@ -18,8 +18,10 @@ function App() {
   const [selectedProject, setSelectedProject] = useState({})
   const [projectDetail, setProjectDetail] = useState(null)
 
-  const loadProject = (projectId) => {
-    let loadedProject = projects.find((project) => project.id === projectId)
+  const loadProject = async (projectId) => {
+    const loadedProject = await projects.find(
+      (project) => project.id === projectId
+    )
     setProjectDetail(loadedProject)
   }
 

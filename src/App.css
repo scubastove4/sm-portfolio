@@ -755,6 +755,11 @@ main::-webkit-scrollbar {
 /* ///////////   project details styling below  /////////// */
 
 #project-details-pg {
+  height: 100%;
+  width: 100%;
+}
+
+#proj-det-pg-container {
   display: grid;
   grid-template: 0.5fr repeat(3, 1fr) / repeat(2, 1fr);
   place-items: center;
@@ -804,8 +809,13 @@ main::-webkit-scrollbar {
 #pd-planned-updates,
 #pd-challenges-container {
   color: #023047;
-  font-size: 1.5em;
   align-self: flex-start;
+}
+
+/* #pd-tech-title, */
+#pd-update-title,
+#pd-challenges-title {
+  font-size: 1.5em;
 }
 
 /* ///////////   resume styling below  /////////// */
@@ -1063,8 +1073,6 @@ main::-webkit-scrollbar {
   /*  //////////////     iphone 12 about above       ////////////*/
 
   #projects-page {
-    /* align-items: center; */
-
     width: 100%;
     padding: 0 2%;
   }
@@ -1126,6 +1134,62 @@ main::-webkit-scrollbar {
     margin-right: 1%;
   }
   /*  ///////////////     iphone 12 projects above       ////////////*/
+  #proj-det-pg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #pd-title {
+    margin: 3% 0;
+  }
+
+  #project-details-pg img,
+  #pd-tech-container,
+  #pd-description,
+  #pd-planned-updates,
+  #pd-challenges-container {
+    width: 90%;
+    margin-bottom: 5%;
+    padding: 0;
+  }
+
+  /* #project-details-pg img {
+    width: 90%;
+    margin-bottom: 3%;
+  } */
+
+  #pd-tech-container {
+    order: 4;
+    color: #023047;
+  }
+
+  #pd-tech-title,
+  #pd-update-title,
+  #pd-challenges-title {
+    font-size: 1.75em;
+  }
+
+  #pd-tech
+  /* ,#pd-updates, #pd-challenges */ {
+    font-size: 1.25em;
+  }
+
+  #pd-description {
+    order: 1;
+    font-size: 1.5em;
+    color: #ebe9e9;
+  }
+
+  #pd-planned-updates {
+    order: 5;
+  }
+
+  #pd-challenges-container {
+    order: 6;
+  }
+
+  /*  ///////////////     iphone 12 project details above       ////////////*/
   #resume {
     justify-content: space-between;
   }
@@ -1148,7 +1212,6 @@ main::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 
     height: 100% !important;
     width: 100% !important;
