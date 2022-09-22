@@ -33,7 +33,7 @@ const projects = [
       '\nTwitter for fitness enthusiasts.\nAs a group, we collaborated on custom frontend and backend REST API.\nI managed user auth, code review/debugging, and Github backend branch policies/version control.',
     technologies:
       'PostgreSQL/Sequelize, Express, React, Node.js, Git/GitHub, BCrypt, JWT, Multer, and Firebase',
-    site: '',
+    site: 'https://get-fitter-two.herokuapp.com/',
     repo: 'https://github.com/scubastove4/fitter-frontend',
     featured: true
   },
