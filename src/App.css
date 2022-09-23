@@ -391,6 +391,7 @@ main::-webkit-scrollbar {
 .descript-container {
   height: 70%;
   width: 100%;
+  cursor: pointer;
 }
 
 /* .image-container h2 {
@@ -439,14 +440,16 @@ main::-webkit-scrollbar {
   font-size: 1.2em;
 }
 
-.sun a {
+.sun a,
+.descript-container a {
   display: flex;
   justify-content: center;
 
   width: 100%;
 }
 
-.sun button {
+.sun button,
+.descript-container button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -512,6 +515,12 @@ main::-webkit-scrollbar {
 
 .tech-title {
   margin-bottom: 2%;
+}
+
+.card .descript-container .test-user,
+.card .descript-container .test-password,
+.card .descript-container a {
+  display: none;
 }
 
 .btn-container {
@@ -740,6 +749,11 @@ main::-webkit-scrollbar {
   margin: 0;
   justify-self: center;
   align-self: start;
+}
+
+.test-user {
+  margin-top: 1.5%;
+  width: 60%;
 }
 
 #proj-pg-container .btn-container {
@@ -997,6 +1011,14 @@ main::-webkit-scrollbar {
 
   .sun h2 {
     font-size: 2em;
+  }
+
+  .sun h3 {
+    font-size: 1.2em;
+  }
+
+  .sun h3:last-of-type {
+    margin-top: 2%;
   }
 
   .card .descript-container .title,

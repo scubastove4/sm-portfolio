@@ -1,5 +1,6 @@
 import rth from '../images/rth.png'
 import dejaBrew from '../images/dejaBrew.png'
+import fitter from '../images/fitter-main-feed.png'
 
 const projects = [
   {
@@ -31,7 +32,7 @@ const projects = [
   },
   {
     id: '3',
-    image: '',
+    image: fitter,
     title: 'fitter',
     testUser: 'Login: testuser1',
     testPassword: 'Password: 12345678',
@@ -49,7 +50,7 @@ const projects = [
     title: 'Buy My Stuff',
     testUser:
       'Customer Login: testuser1@fake.com | Admin Login: testadmin1@fake.com',
-    testPassword: 'Password for both: 12345678',
+    testPassword: 'Passwords: 12345678',
     adminLink: 'https://www.buy-my-stuff-online.com/admin',
     description:
       '\nEcommerce site, with separate admin and customer models, that conditionally render specific functionality.\nThe goal of this project is to make an intuitive, easy-to-use template that a growing small business can replicate and modify to suit their needs.',

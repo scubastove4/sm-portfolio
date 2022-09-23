@@ -13,6 +13,15 @@ const Description = ({ project, toProjectDetails }) => {
       <span className="tech-container">
         <h3 className="tech-title">Technologies Used: </h3>
         <p className="tech">{project.technologies}</p>
+        {project.testUser && <p className="test-user">{project.testUser}</p>}
+        {project.testPassword && (
+          <p className="test-password">{project.testPassword}</p>
+        )}
+        {project.adminLink && (
+          <a href={project.adminLink}>
+            <button>Admin Link</button>
+          </a>
+        )}
       </span>
     </div>
   )
