@@ -441,7 +441,8 @@ main::-webkit-scrollbar {
 }
 
 .sun a,
-.descript-container a {
+.descript-container a,
+#pd-test-container a {
   display: flex;
   justify-content: center;
 
@@ -449,7 +450,8 @@ main::-webkit-scrollbar {
 }
 
 .sun button,
-.descript-container button {
+.descript-container button,
+#pd-test-container button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -604,9 +606,6 @@ main::-webkit-scrollbar {
   width: 80%;
   height: 100%;
   color: white;
-  /* background: linear-gradient(#eee 35%, #212529, #000, #023047);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 
 #about-tech-title {
@@ -628,14 +627,6 @@ main::-webkit-scrollbar {
   grid-column-start: 3;
   grid-row-start: 3;
 }
-
-/* #libraries,
-#frameworks,
-#other-skills {
-  background: linear-gradient(#eee, #000, #023047);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
 
 #libraries h3,
 #frameworks h3,
@@ -781,7 +772,7 @@ main::-webkit-scrollbar {
 
 #proj-det-pg-container {
   display: grid;
-  grid-template: 0.5fr repeat(3, 1fr) / repeat(2, 1fr);
+  grid-template: 0.5fr repeat(3, 1fr) / repeat(3, 1fr);
   place-items: center;
 
   height: 100%;
@@ -789,10 +780,22 @@ main::-webkit-scrollbar {
 }
 
 #pd-title {
-  grid-column-end: span 2;
+  grid-column-end: span 3;
 
   font-size: 3em;
   color: #ebe9e9;
+}
+
+#pd-img-tech {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row-start: 2;
+
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+  padding: 0 2%;
 }
 
 #project-details-pg img {
@@ -802,12 +805,20 @@ main::-webkit-scrollbar {
 }
 
 #pd-tech-container,
+#pd-test-container,
 #pd-planned-updates,
 #pd-challenges-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #ebe9e9;
+}
+
+#pd-tech-container {
+  align-self: center;
+
+  width: 45%;
+  margin-left: 5%;
 }
 
 #pd-tech-title {
@@ -819,20 +830,49 @@ main::-webkit-scrollbar {
 }
 
 #pd-description {
-  grid-column-end: span 2;
+  grid-column-end: span 3;
 
   font-size: 2em;
   padding: 0 2%;
   color: #023047;
 }
 
+#pd-bottom-row {
+  grid-column-end: span 3;
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
+#pd-test-container,
+#pd-planned-updates,
+#pd-challenges-container {
+  width: 30%;
+}
+
+#pd-test-user {
+  width: 100%;
+  font-size: 1.5em;
+}
+#pd-test-password,
+#pd-test-container a {
+  width: 100%;
+  font-size: 1.25em;
+}
+
+#pd-test-container a {
+  justify-content: flex-start;
+}
+
+#pd-test-container,
 #pd-planned-updates,
 #pd-challenges-container {
   color: #023047;
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 
-/* #pd-tech-title, */
+#pd-test-title,
 #pd-update-title,
 #pd-challenges-title {
   font-size: 1.5em;
@@ -1175,32 +1215,12 @@ main::-webkit-scrollbar {
   #project-details-pg img,
   #pd-tech-container,
   #pd-description,
+  #pd-test-container,
   #pd-planned-updates,
   #pd-challenges-container {
     width: 90%;
     margin-bottom: 5%;
     padding: 0;
-  }
-
-  /* #project-details-pg img {
-    width: 90%;
-    margin-bottom: 3%;
-  } */
-
-  #pd-tech-container {
-    order: 4;
-    color: #023047;
-  }
-
-  #pd-tech-title,
-  #pd-update-title,
-  #pd-challenges-title {
-    font-size: 1.75em;
-  }
-
-  #pd-tech
-  /* ,#pd-updates, #pd-challenges */ {
-    font-size: 1.25em;
   }
 
   #pd-description {
@@ -1209,12 +1229,43 @@ main::-webkit-scrollbar {
     color: #ebe9e9;
   }
 
-  #pd-planned-updates {
-    order: 5;
+  #pd-img-tech {
+    order: 2;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  #pd-challenges-container {
-    order: 6;
+  #pd-tech-container {
+    order: 3;
+    color: #023047;
+    margin: 2% 0 3% 0;
+  }
+
+  #pd-bottom-row {
+    order: 4;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #pd-tech-title,
+  #pd-test-title,
+  #pd-update-title,
+  #pd-challenges-title {
+    font-size: 1.75em;
+  }
+
+  #pd-tech, #pd-test-user, #pd-test-password
+  /* ,#pd-updates, #pd-challenges */ {
+    font-size: 1.25em;
+  }
+
+  #pd-test-container a {
+    justify-content: center;
+    font-size: 1.5em;
   }
 
   /*  ///////////////     iphone 12 project details above       ////////////*/
