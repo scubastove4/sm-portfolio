@@ -6,6 +6,8 @@ const projects = [
     id: '1',
     image: rth,
     title: 'Run the Horses',
+    testUser: '',
+    testPassword: '',
     description:
       "Run the Horses brings the world's most famous race series right to your desktop. A series of card flips determines your Triple Crown destiny!",
     technologies: 'HTML, CSS, Vanilla JavaScript, and Git/GitHub',
@@ -17,6 +19,8 @@ const projects = [
     id: '2',
     image: dejaBrew,
     title: 'Déjà Brew',
+    testUser: '',
+    testPassword: '',
     description:
       'Public catalog, where users can add, rate, and review beers. Incorporates geolocation to find nearby breweries sourced from the Open Brewery DB API.',
     technologies:
@@ -29,6 +33,8 @@ const projects = [
     id: '3',
     image: '',
     title: 'fitter',
+    testUser: 'Login: testuser1',
+    testPassword: 'Password: 12345678',
     description:
       '\nTwitter for fitness enthusiasts.\nAs a group, we collaborated on custom frontend and backend REST API.\nI managed user auth, code review/debugging, and Github backend branch policies/version control.',
     technologies:
@@ -41,6 +47,10 @@ const projects = [
     id: '4',
     image: '',
     title: 'Buy My Stuff',
+    testUser:
+      'Customer Login: testuser1@fake.com | Admin Login: testadmin1@fake.com',
+    testPassword: 'Password for both: 12345678',
+    adminLink: 'https://www.buy-my-stuff-online.com/admin',
     description:
       '\nEcommerce site, with separate admin and customer models, that conditionally render specific functionality.\nThe goal of this project is to make an intuitive, easy-to-use template that a growing small business can replicate and modify to suit their needs.',
     technologies:

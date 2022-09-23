@@ -412,6 +412,7 @@ main::-webkit-scrollbar {
 
 .sun {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -432,13 +433,40 @@ main::-webkit-scrollbar {
     1px -1px 0 rgba(0, 0, 0, 0.2), -1px -1px 0 rgba(0, 0, 0, 0.2);
 }
 
+.sun h3 {
+  width: 60%;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.sun a {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.sun button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: max-content;
+  width: 30%;
+  margin-top: 2%;
+  border-radius: 1em;
+  color: #000;
+  border: 0.5px solid #023047;
+  background-color: transparent;
+  font-size: 0.75em;
+  cursor: pointer;
+}
+
 .card .descript-container img {
   display: none;
 }
 
 .descript-container {
-  /* display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -447,10 +475,8 @@ main::-webkit-scrollbar {
   height: 100%;
   width: 90%;
   background-color: white;
-  /* border-radius: 0.7em; */
   border-radius: 50%;
 
-  /* background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.fbcd.co%2Fproducts%2Fresized%2Fresized-750-500%2F96795d4b9177795d2c06d4c0df5f59a079973bdae52566b9cc481decc7dc7d0c.jpg&f=1&nofb=1); */
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -459,39 +485,21 @@ main::-webkit-scrollbar {
 .card .descript-container {
   background-color: #ea3546;
   opacity: 0.8;
-  /* background-image: url('./images/orange-moon.jpeg');
-  background-position: 1.2%;
-  background-size: 150%; */
   color: #ebe9e9;
 }
 
 .description {
-  /* grid-row-end: span 2;
-  justify-self: center;
-  align-self: center; */
-  /* text-decoration: underline; */
-
   width: 70%;
   line-height: 1.5em;
-  /* margin-right: 3%; */
   padding: 0 2% 0 3%;
   word-break: keep-all;
 }
 
-/* .title,
-.tech-container {
-  grid-column-start: 2;
-  justify-self: center;
-} */
-
 .title {
-  /* align-self: center; */
   margin-bottom: 5%;
 }
 
 .tech-container {
-  /* align-self: flex-start; */
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -521,13 +529,11 @@ main::-webkit-scrollbar {
   width: 30%;
   margin: 4% 2% 0 0;
   border-radius: 5px;
-  /* color: #ebe9e9; */
   color: #2e282a;
-  /* border: 3px solid #ebe9e9; */
   border: none;
   background-color: transparent;
   box-shadow: 0 0 0.9em #ea3546;
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 .btn-container button:last-child {

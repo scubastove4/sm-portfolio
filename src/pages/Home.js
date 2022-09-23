@@ -38,6 +38,15 @@ const Home = ({
                     ) : (
                       <div className="sun">
                         <h2>{project.title}</h2>
+                        {project.testUser && <h3>{project.testUser}</h3>}
+                        {project.testPassword && (
+                          <h3>{project.testPassword}</h3>
+                        )}
+                        {project.adminLink && (
+                          <a href={project.adminLink}>
+                            <button>Admin Link</button>
+                          </a>
+                        )}
                       </div>
                     )}
                     <div className="btn-container">
