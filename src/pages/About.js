@@ -19,15 +19,15 @@ const About = () => {
       </p>
       <h2 id="about-tech-title">Technologies</h2>
       <span id="libraries">
-        <h3>Libraries:</h3>
+        <h3>Languages:</h3>
         <p>JavaScript, Python, SQL, CSS, HTML</p>
       </span>
       <span id="frameworks">
-        <h3>Frameworks:</h3>
+        <h3>Frameworks &#38; Libraries:</h3>
         <p>React, Vue, Node, Django, Express, MongoDB, Git</p>
       </span>
       <span id="other-skills">
-        <h3>Other:</h3>
+        <h3>Other Tools:</h3>
         <p>GitHub, Firebase, Netlify, Heroku, Surge</p>
       </span>
     </section>
