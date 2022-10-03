@@ -12,7 +12,7 @@ const Home = ({
     <div id="home">
       <section id="blurb">
         <h1>Steve Morello</h1>
-        <h2>Welcome to my page!</h2>
+        <h2>Software Engineer</h2>
       </section>
       <section id="proj-container">
         <div id="featured-projects">
