@@ -1221,6 +1221,12 @@ form button {
     padding: 3% 3%;
   }
 
+  form button {
+    margin-top: 4%;
+    font-size: 2em;
+    padding: 2% 4%;
+  }
+
   /*  //////////////     iphone 12 contact above       ////////////*/
 
   #projects-page {
