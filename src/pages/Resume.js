@@ -1,7 +1,23 @@
+import { useState } from 'react'
+
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5'
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
 import resume from '../Resume/Stephen_Morello_Resume.pdf'
 
+const options = {
+  cMapUrl: 'cmaps/',
+  cMapPacked: true,
+  standardFontDataUrl: 'standard_fonts/'
+}
+
 const Resume = () => {
+  const [numPages, setNumPages] = useState(null)
+  const [pageNumber, setPageNumber] = useState(1)
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages)
+  }
+
   return (
     <div id="resume">
       <a href={resume} download={resume}>
@@ -10,11 +26,18 @@ const Resume = () => {
       {/* {resumeImage ? ( */}
       <Document
         file={resume}
+        onLoadSuccess={onDocumentLoadSuccess}
         onLoadError={console.error}
         style={{ width: '50%', height: '100%' }}
+        options={options}
       >
-        <Page pageIndex={0} />
+        {Array.from(new Array(numPages), (el, index) => (
+          <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+        ))}
       </Document>
+      {/* <p>
+        Page {pageNumber} of {numPages}
+      </p> */}
       {/* ) : (
         <object
           data={resume}

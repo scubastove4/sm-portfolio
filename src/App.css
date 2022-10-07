@@ -1012,6 +1012,28 @@ form button {
   margin: 1% 0;
 }
 
+.react-pdf__Document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.react-pdf__Page {
+  max-width: calc(100% - 2em);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  margin: 1em;
+}
+
+.react-pdf__Page canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.react-pdf__message {
+  padding: 20px;
+  color: white;
+}
+
 /* .react-pdf_Document {
   height: 100%;
   width: 50%;
