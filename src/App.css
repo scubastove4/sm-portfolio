@@ -848,6 +848,8 @@ form button {
 .test-user {
   margin-top: 1.5%;
   width: 60%;
+
+  border-top: 1px solid black;
 }
 
 #proj-pg-container .btn-container {
@@ -1034,22 +1036,75 @@ form button {
   color: white;
 }
 
-/* .react-pdf_Document {
-  height: 100%;
-  width: 50%;
-} */
-
 /* ///////////   general styling above  /////////// */
 
-/* @media (min-width: 1440px){
-
-} */
-
-/* ///////// ~13in styling above */
-
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-height: 660px) {
+  #featured-projects h3 {
+    writing-mode: vertical-rl;
+  }
 }
 
+@media only screen and (max-width: 1400px) {
+  /*  /////////   max 1400 home page below  //////////////// */
+  #featured-projects h3 {
+    font-size: 2.5em;
+  }
+
+  #featured-projects svg {
+    font-size: 3em;
+  }
+
+  .sun h2 {
+    font-size: 3.5em;
+  }
+
+  .sun h3 {
+    font-size: 1.5em;
+    word-spacing: 0.2em;
+  }
+
+  .sun button {
+    font-size: 1em;
+  }
+
+  .card .descript-container .title {
+    font-size: 2em;
+    margin-bottom: 2%;
+  }
+
+  .card .descript-container .description,
+  .card .descript-container .tech-container {
+    font-size: 1.2em;
+  }
+
+  .card .descript-container .description {
+    width: 80%;
+  }
+
+  .btn-container button {
+    font-size: 1.25em;
+    width: 22%;
+  }
+
+  /*  /////////   max 1400 about page below  //////////////// */
+  #about img {
+    width: 60%;
+  }
+
+  /*  /////////   max 1400 projects page below  //////////////// */
+  #proj-pg-container .descript-container {
+    grid-template-rows: 10% 50% 40%;
+  }
+
+  #proj-pg-container .descript-container .tech-container {
+    place-self: center;
+  }
+
+  /*  /////////   max 1400 projects details page below  //////////////// */
+  #project-details-pg img {
+    width: 25em;
+  }
+}
 /* ///////////   mobile styling below  /////////// */
 @media only screen and (max-width: 850px) {
   #app-content {

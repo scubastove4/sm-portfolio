@@ -23,7 +23,8 @@ const Resume = () => {
       <a href={resume} download={resume}>
         <button>Download</button>
       </a>
-      {/* {resumeImage ? ( */}
+      {/* //////  help with showing multiple pages and CSS
+       https://github.com/wojtekmaj/react-pdf/tree/main/sample/create-react-app-5/src */}
       <Document
         file={resume}
         onLoadSuccess={onDocumentLoadSuccess}
