@@ -1105,6 +1105,11 @@ form button {
     width: 25em;
   }
 }
+
+@media only screen and (max-width: 1330px) {
+  /*  /////////   max 1330 home page below  //////////////// */
+}
+
 /* ///////////   mobile styling below  /////////// */
 @media only screen and (max-width: 850px) {
   #app-content {
