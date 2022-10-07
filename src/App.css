@@ -566,72 +566,67 @@ main::-webkit-scrollbar {
 
 #about {
   display: grid;
-  grid-template: 1fr 1fr 2fr / 1fr 1fr 1fr 3fr;
+  grid-template: 1fr 1fr 2fr / 1fr 1fr 1fr 1fr;
 
   width: 100%;
   height: 100%;
   font-size: 1.5em;
   color: #ebe9e9;
-  padding: 0 2%;
+  padding: 1% 2%;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#about::-webkit-scrollbar {
+  display: none; /*Chrome */
 }
 
 #about img {
   grid-column-start: 1;
-  grid-column-end: span 3;
+  grid-column-end: span 1;
   grid-row-start: 1;
-  place-self: center;
-
-  height: 100%;
-  width: 20%;
-  border-radius: 1em;
-}
-
-#bio-title {
-  grid-column-start: 4;
-  grid-row-start: 1;
-  place-self: center;
-}
-
-#bio {
-  grid-column-start: 4;
-  grid-row-start: 2;
   grid-row-end: span 2;
   place-self: center;
 
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-
-  width: 80%;
   height: 100%;
-  color: white;
+  width: 50%;
+  border-radius: 1em;
 }
 
 #about-tech-title {
-  grid-column-start: 1;
+  grid-column-start: 2;
   grid-column-end: span 3;
-  grid-row-start: 2;
+  grid-row-start: 1;
   place-self: center;
+
+  margin-bottom: 2%;
+}
+
+#libraries,
+#frameworks,
+#other-skills {
+  word-spacing: 0.2em;
 }
 
 #libraries {
-  grid-column-start: 1;
-  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-row-start: 2;
 }
 #frameworks {
-  grid-column-start: 2;
-  grid-row-start: 3;
+  grid-column-start: 3;
+  grid-row-start: 2;
 }
 #other-skills {
-  grid-column-start: 3;
-  grid-row-start: 3;
+  grid-column-start: 4;
+  grid-row-start: 2;
 }
 
 #libraries h3,
 #frameworks h3,
 #other-skills h3 {
   padding: 0 2%;
+  margin-bottom: 1%;
   text-decoration: underline;
 }
 
@@ -639,6 +634,60 @@ main::-webkit-scrollbar {
 #frameworks p,
 #other-skills p {
   padding: 0 2%;
+}
+
+#bio-details {
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  grid-row-start: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 3% 0;
+  color: #023047;
+}
+
+#bio {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 90%;
+  height: 100%;
+}
+
+#trips {
+  display: grid;
+  grid-template: 1fr 1fr 2fr / 1fr 1fr;
+}
+
+#trips h3 {
+  grid-column-end: span 2;
+  place-self: center;
+}
+
+#us-h {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  place-self: center;
+}
+
+#international-h {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  place-self: center;
+}
+
+#trips p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2%;
+  word-spacing: 0.2em;
 }
 
 /* ///////////////   contact page below   ////////////////////////// */
@@ -976,8 +1025,10 @@ form button {
 
 /* ///////// ~13in styling above */
 
-/* ///////////   mobile styling below  /////////// */
+@media only screen and (max-width: 1400px) {
+}
 
+/* ///////////   mobile styling below  /////////// */
 @media only screen and (max-width: 850px) {
   #app-content {
     grid-template: 0.5fr 9fr 0.5fr / 1fr;
