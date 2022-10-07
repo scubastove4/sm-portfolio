@@ -23,41 +23,40 @@ const Contact = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={formValues.name}
-          onInput={handleInput}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={formValues.email}
-          onInput={handleInput}
-          required
-        />
-        <textarea
-          name="message"
-          id="message"
-          value={formValues.message}
-          onInput={handleInput}
-          required
-        ></textarea>
-        <button
-          type="submit"
-          disabled={
-            !formValues.name || !formValues.email || !formValues.message
-          }
-        >
-          Send Email
-        </button>
-      </form>
-    </div>
+    <form onSubmit={(e) => handleSubmit(e)}>
+      <label htmlFor="name">Name: </label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        value={formValues.name}
+        onInput={handleInput}
+        required
+      />
+      <label htmlFor="email">Email: </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        value={formValues.email}
+        onInput={handleInput}
+        required
+      />
+      <label htmlFor="message">Message/Inquiry: </label>
+      <textarea
+        name="message"
+        id="message"
+        value={formValues.message}
+        onInput={handleInput}
+        required
+      ></textarea>
+      <button
+        type="submit"
+        disabled={!formValues.name || !formValues.email || !formValues.message}
+      >
+        Send Email
+      </button>
+    </form>
   )
 }
 
