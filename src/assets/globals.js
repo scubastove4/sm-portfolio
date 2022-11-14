@@ -1,6 +1,7 @@
 import rth from '../images/rth.png'
 import dejaBrew from '../images/dejaBrew.png'
 import fitter from '../images/fitter-main-feed.png'
+import bms from '../images/bms-img.png'
 
 const projects = [
   {
@@ -46,7 +47,7 @@ const projects = [
   },
   {
     id: '4',
-    image: '',
+    image: bms,
     title: 'Buy My Stuff',
     testUser:
       'Customer Login: testuser1@fake.com | Admin Login: testadmin1@fake.com',
