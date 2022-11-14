@@ -1285,7 +1285,7 @@ form button {
 
   .btn-container button {
     font-size: 1em;
-    padding: 2%;
+    padding: 0 2%;
     width: 25%;
   }
 
