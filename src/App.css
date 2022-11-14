@@ -1507,6 +1507,12 @@ form button {
     align-items: center;
   }
 
+  #pd-future-updates ul,
+  #pd-challenges-container ul {
+    width: 90%;
+    font-size: 1.25em;
+  }
+
   #pd-tech-title,
   #pd-test-title,
   #pd-update-title,
