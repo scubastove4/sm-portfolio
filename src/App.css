@@ -647,7 +647,8 @@ main::-webkit-scrollbar {
   align-items: center;
 
   margin: 3% 0;
-  color: #023047;
+  /* color: #023047; */
+  color: #ebe9e9;
 }
 
 #bio {
@@ -663,6 +664,8 @@ main::-webkit-scrollbar {
 #trips {
   display: grid;
   grid-template: 1fr 1fr 2fr / 1fr 1fr;
+
+  color: #023047;
 }
 
 #trips h3 {
