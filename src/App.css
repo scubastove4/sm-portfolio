@@ -787,7 +787,7 @@ form button {
 
 #proj-pg-container .descript-container {
   display: grid;
-  grid-template: 10% 60% 30% / 55% 45%;
+  grid-template: 10% 50% 40% / 55% 45%;
   align-content: center;
   justify-items: center;
 
@@ -816,9 +816,11 @@ form button {
   grid-column-start: 1;
   grid-row-start: 2;
   place-self: center;
+  /* align-self: flex-start;
+  justify-self: center; */
 
   width: 95%;
-  height: 70%;
+  height: 90%;
   border-radius: 1em;
   margin-left: 3%;
 }
@@ -844,8 +846,9 @@ form button {
   grid-row-start: 3;
 
   margin: 0;
-  justify-self: center;
-  align-self: start;
+  /* justify-self: center;
+  align-self: start; */
+  place-self: center;
 }
 
 .test-user {
