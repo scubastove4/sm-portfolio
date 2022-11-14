@@ -917,7 +917,7 @@ form button {
 
 #pd-tech-container,
 #pd-test-container,
-#pd-planned-updates,
+#pd-future-updates,
 #pd-challenges-container {
   display: flex;
   flex-direction: column;
@@ -957,7 +957,7 @@ form button {
 }
 
 #pd-test-container,
-#pd-planned-updates,
+#pd-future-updates,
 #pd-challenges-container {
   width: 30%;
 }
@@ -977,10 +977,16 @@ form button {
 }
 
 #pd-test-container,
-#pd-planned-updates,
+#pd-future-updates,
 #pd-challenges-container {
   color: #023047;
   /* align-self: flex-start; */
+}
+
+#pd-future-updates ul,
+#pd-challenges-container ul {
+  font-size: 1.5em;
+  margin-top: 1%;
 }
 
 #pd-test-title,
@@ -1444,7 +1450,7 @@ form button {
   #pd-tech-container,
   #pd-description,
   #pd-test-container,
-  #pd-planned-updates,
+  #pd-future-updates,
   #pd-challenges-container {
     width: 90%;
     margin-bottom: 5%;

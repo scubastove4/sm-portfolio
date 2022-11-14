@@ -22,7 +22,7 @@ const ProjectDetails = ({ loadProject, projectDetail }) => {
               alt={projectDetail.image ? projectDetail.name : 'image pending'}
             />
             <span id="pd-tech-container">
-              <h3 id="pd-tech-title">Technologies Used: </h3>
+              <h3 id="pd-tech-title">Technologies Used:</h3>
               <p id="pd-tech">{projectDetail.technologies}</p>
             </span>
           </div>
@@ -40,13 +40,25 @@ const ProjectDetails = ({ loadProject, projectDetail }) => {
                 )}
               </span>
             )}
-            <span id="pd-planned-updates">
-              <h3 id="pd-update-title">Planned Updates: </h3>
-              {/* <p id="pd-updates">{projectDetail.updates}</p> */}
+            <span id="pd-future-updates">
+              <h3 id="pd-update-title">Future Updates:</h3>
+              {projectDetail.futureUpdates.length > 0 ? (
+                <ul>
+                  {projectDetail.futureUpdates.map((update, index) => (
+                    <li key={index}>{update}</li>
+                  ))}
+                </ul>
+              ) : null}
             </span>
             <span id="pd-challenges-container">
-              <h3 id="pd-challenges-title">Build Challenges: </h3>
-              {/* <p id="pd-challenges">{projectDetail.challenges}</p> */}
+              <h3 id="pd-challenges-title">Build Challenges:</h3>
+              {projectDetail.challenges.length > 0 ? (
+                <ul>
+                  {projectDetail.challenges.map((challenge, index) => (
+                    <li key={index}>{challenge}</li>
+                  ))}
+                </ul>
+              ) : null}
             </span>
           </div>
         </div>

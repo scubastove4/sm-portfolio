@@ -16,7 +16,7 @@ const projects = [
     site: 'https://runthehorses.surge.sh/',
     repo: 'https://github.com/scubastove4/Run-the-Horses',
     featured: false,
-    plannedUpdates: [],
+    futureUpdates: [],
     challenges: ['Dynamic "track" size']
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     site: 'https://deja-brew-reviews.herokuapp.com/',
     repo: 'https://github.com/scubastove4/Deja_Brew',
     featured: true,
-    plannedUpdates: ['Responsive design', 'Integrate Google Maps API'],
+    futureUpdates: ['Responsive design', 'Integrate Google Maps API'],
     challenges: ['First fullstack deployment bugs', 'Integrating Google Maps']
   },
   {
@@ -48,7 +48,7 @@ const projects = [
     site: 'https://get-fitter-two.herokuapp.com/',
     repo: 'https://github.com/scubastove4/fitter-frontend',
     featured: true,
-    plannedUpdates: ['Responsive design', 'More intuitive flow'],
+    futureUpdates: ['Responsive design', 'More intuitive flow'],
     challenges: [
       'First time doing group Git',
       'Implementing optional file upload'
@@ -69,7 +69,7 @@ const projects = [
     site: 'https://www.buy-my-stuff-online.com',
     repo: 'https://github.com/scubastove4/buy-my-stuff',
     featured: true,
-    plannedUpdates: ['Responsive for web', 'Adjust credit card entry styling'],
+    futureUpdates: ['Responsive for web', 'Adjust credit card entry styling'],
     challenges: ['Integrating Stripe for payment processing']
   }
 ]
